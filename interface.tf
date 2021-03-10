@@ -25,6 +25,13 @@ variable "enable_dns_support" {
      default     = true
 }
 
+# Adding variable due to book referencing it in 
+variable "map_public_ip_on_launch" {
+  type = bool
+  description = "Should be false if you do not want to auto-assign public IP on launch"
+  default     = true
+}
+
 # Outputs section
 output "public_subnet_id" {
      value = aws_subnet.public.id
